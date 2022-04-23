@@ -1,6 +1,6 @@
 # React Pac Man animation!
 
-Using the best arcade game ever to lear about props!
+Using the best arcade game ever to learn about props!
 
 ## Goal tracking: 
 - used props to update the color of the ghosts
