@@ -31,7 +31,7 @@ function toggleSize(){
   return (
     <div className="App">
      <h1>Pac Man</h1>
-     <p>I'm not quite sure what's going to happen here!</p>
+     <p>Built with Reactjs</p>
      <h2>Game One - Pause</h2>
      <Game 
       ghostColor="#46bfee" 
