@@ -5,9 +5,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:#46bfee ;
 }
+/*
+Pac Man hex codes for reference
+#d03e19 - red
+#46bfee - blue 
+#ea82e5 - purple
+#fdff00 - yellow
+Ghost colors
+#FF0000 - red
+#FFB8FF - light purple
+#00FFFF - light blue
+#FFB852 - light brown
+*/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes moves{
+  to{
+    left: 100%; 
+  }
+}
+
+.board {
+  text-align: left;
+  background: black;
+  padding: .5em 0;
+  height: 1em;
+}
+
+.ghost { 
+  color: red;
+  position: absolute;
+  left: 0; 
+  animation: moves 7s .5s linear infinite; 
+}
+
+.pac-man {
+  position: absolute;
+  left: 0; 
+  color: yellow;
+  animation: moves 7.5s linear infinite; 
+}
+
+.board.pause .ghost { animation-play-state: paused; }
+.board.pause .pac-man { animation-play-state: paused; }

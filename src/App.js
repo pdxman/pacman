@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import Game from './Game'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Pac Man</h1>
+     <p>I'm not quite sure what's going to happen here!</p>
+     <h2>Game One - Pause</h2>
+     <Game ghostColor="#46bfee" />
+     <h2>Game Two - Speed</h2>
+     <Game ghostColor="#FFB8FF"/>
+     <h2>Game Two - Change Direction </h2>
+     <Game ghostColor="#FF0000"/>
+     <h2>Game Two - Dont Know yet- easter egg perhaps! </h2>
+     <Game ghostColor="#FFB852"/>
     </div>
   );
 }
