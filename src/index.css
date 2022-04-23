@@ -1,8 +1,5 @@
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
   font-family: 'Press Start 2P', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,6 +35,8 @@ code {
   background: black;
   padding: .5em 0;
   height: 1em;
+  display: flex; 
+  align-items: center;
 }
 
 .ghost { 
@@ -66,3 +65,32 @@ code {
 
 .board.changeDirection .ghost { animation-direction: reverse; }
 .board.changeDirection .pac-man { transform: rotateY(180deg) ; animation-direction: reverse; }
+
+
+/* button styling */
+button { 
+  background: none;
+  border: 3px solid #000;
+  padding: 1em;
+  text-transform: uppercase;
+  font-weight: 600; 
+  position: relative;
+  overflow: hidden;
+}
+
+button:before{
+  content:''; 
+  position: absolute;
+  left: 0;
+  top: 0; 
+  width: 100%;
+  height: 100%;
+  background: yellow;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform .25s ease; ;
+}
+
+button:hover:before{
+  transform: translateX(0%);
+}

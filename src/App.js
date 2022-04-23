@@ -6,6 +6,7 @@ function App() {
 const [pause, setPause] = useState(false)
 const [direction, setDirection] = useState(false)
 const [fast, setFast] = useState(7.5)
+const [size, setSize] = useState(1)
 
 function togglePause(){
     setPause(!pause)
@@ -20,6 +21,11 @@ function toggleDirection(){
 function toggleSpeed(){
     setFast(fast - 1)
     console.log('Fast: ', fast )
+}
+
+function toggleSize(){
+  setSize(size + 1)
+  console.log('Size: ', size )
 }
 
   return (
@@ -42,7 +48,7 @@ function toggleSpeed(){
       divName={!pause ? 'board' : 'board SpeedUp'}
       fast={fast}
     />
-     <h2>Game Two - Change Direction </h2>
+     <h2>Game Three - Change Direction </h2>
      <Game 
       ghostColor="#FF0000"
       buttonText="Change Game Direction"
@@ -50,12 +56,14 @@ function toggleSpeed(){
       divName={!direction ? 'board' : 'board changeDirection'}
       fast="7.5"
     />
-     <h2>Game Two - Dont Know yet- easter egg perhaps! </h2>
+     <h2>Game Four - Easter Egg Button! </h2>
      <Game 
       ghostColor="#FFB852"
-      buttonText="Not Sure Yet what this is going to do!"
+      buttonText="Just Click! You'll see!"
       divName={!pause ? 'board' : 'board easterEgg'}
       fast="7.5"
+      interactivity={toggleSize}
+      size={size}
     />
     </div>
   );
