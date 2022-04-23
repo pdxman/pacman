@@ -5,11 +5,6 @@ import { ImPacman } from 'react-icons/im';
 export default function Game(props){
     const [pause, setPause] = useState(false)
 
-    function togglePause(){
-        setPause(!pause)
-        console.log(pause)
-    }
-    
     // use props(?) to pass different interactive features 
     // Featues- 
     // - speed
@@ -21,11 +16,11 @@ export default function Game(props){
     
     return(
         <>
-            <div className={!pause ? 'board' : 'board pause'}>
+            <div className={props.divName}>
                 <FaGhost style={{ color: `${props.ghostColor}` }} className="ghost"/>
                 <ImPacman className="pac-man"/>
             </div>
-            <button onClick={togglePause}>Pause</button>
+            <button onClick={props.interactivity}>{props.buttonText}</button>
         </>
        
     )

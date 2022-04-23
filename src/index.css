@@ -54,3 +54,6 @@ code {
 
 .board.pause .ghost { animation-play-state: paused; }
 .board.pause .pac-man { animation-play-state: paused; }
+
+.board.changeDirection .ghost { animation-direction: reverse; }
+.board.changeDirection .pac-man { transform: rotateY(180deg) ; animation-direction: reverse; }
