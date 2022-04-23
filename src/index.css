@@ -1,11 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: 'Press Start 2P', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background:#46bfee ;
+  overflow: hidden;
 }
 /*
 Pac Man hex codes for reference
@@ -42,14 +44,21 @@ code {
   color: red;
   position: absolute;
   left: 0; 
-  animation: moves 7s .5s linear infinite; 
+  animation-name: moves ; 
+  animation-duration: 7.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: .5s ;
 }
 
 .pac-man {
   position: absolute;
   left: 0; 
   color: yellow;
-  animation: moves 7.5s linear infinite; 
+  animation-name: moves ; 
+  /* animation-duration: 7.5s; */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .board.pause .ghost { animation-play-state: paused; }

@@ -4,9 +4,11 @@ Using the best arcade game ever to lear about props!
 
 ## Goal tracking: 
 - used props to update the color of the ghosts
-- use props tp change direction using function activated by the button
-
+- used props to change direction using function activated by the button
+- used props to change speed using function activated by the button
 ## Further Goals: 
-- change speed using function activated by the button
+- use range slider for speed adjustment
+- update change direction to happen at spot of click event
 - add an easter egg for fun times
 - add new functions
+- consolidate functions so I dont repeat myself
